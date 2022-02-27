@@ -1,8 +1,0 @@
-mixin poster(type, src, classes)
-  .poster(class= classes)
-    if type == 'video'
-      video.poster__video(loop muted autoplay)
-        source(src= src type='video/mp4')
-    else if type == 'img'
-      .poster__img(style='background-image: url(' + src + ')')
-    block
