@@ -1,0 +1,29 @@
+@import bourbon
+@import utilities/_functions
+@import utilities/_mixins
+@import utilities/_var
+
+.leadership-inner
+  a
+    border-bottom: 1px solid transparent
+    &:hover
+      border-bottom-color: $blue
+  &__container
+    display: flex
+    +r(991)
+      flex-wrap: wrap
+  &__left
+    margin-right: 5%
+    margin-bottom: 50px
+    width: 45%
+    +r(991)
+      margin-right: 0
+      width: 100%
+  &__right
+    width: 50%
+    +r(991)
+      width: 100%
+  h1
+    margin-bottom: 30px
+  &__header
+    margin-bottom: 60px

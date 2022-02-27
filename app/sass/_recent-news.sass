@@ -1,0 +1,25 @@
+@import utilities/_functions
+@import utilities/_mixins
+@import utilities/_var
+
+.recent-news
+  &__item
+    &:nth-child(n+2)
+      margin-top: 52px
+      +r(991)
+        margin-top: 43px
+    &:first-child
+      margin-top: 0
+  &__link
+    font-family: $monrope-bold
+    font-weight: 700
+    font-size: 22px
+    color: $blue
+    border-bottom: 1px solid transparent
+    +r(991)
+      font-size: 18px
+    +r(767)
+      font-size: 15px
+    &:hover
+      border-bottom: 1px solid $blue
+      

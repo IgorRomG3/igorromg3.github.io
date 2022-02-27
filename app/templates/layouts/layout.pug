@@ -1,0 +1,140 @@
+include ../partials/button/button
+
+doctype 
+html(lang='en')
+  block variables
+    
+  head
+    block head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title #{title}
+        link(rel="stylesheet" href="styles/style.min.css")
+    body(class= title == 'Technology' ? 'scroll-disable' : '')
+    block header
+      if title == 'Home'
+        .fade-top-down.pushdown.pushdown_active
+          .pushdown__close
+          .container.container_big
+            .pushdown__content
+              a.pushdown__text(href='#') Optional annoucement here lorem ipsum dolor sit amet, consectetur adipiscing elit sed >
+      nav.fade-top-down.nav
+        .container.container_big.nav__container
+          .logo.nav__logo
+              a.logo__link(href='')
+                img.logo__img(src='images/logo.svg' alt='')
+          .nav__right
+            .menu
+              .menu__item.menu__item_parent
+                a.menu__link(href='#' data-type='technology') Technology
+                .sub(data-type='technology')
+                  .container.container_big.sub__container
+                    .sub__left
+                      .sub__title Technology
+                    .sub__right
+                      .sub__list
+                        .sub__item
+                          a(href='#') RITe™ Platform >
+                          p Our breakthrough, proprietary technology platform engineered to enhance drug absorption through our easy-to-take orally disintegrating tablet
+                        .sub__item
+                          a(href='#') Manufacturing >
+                          p Supporting our R&D is our end-to-end control of formulating, developing and manufacturing our proprietary products in-house at our state-of-the-art facility in the USA 
+                        .sub__item
+                          a(href='#') Intellectual Property >
+                          p Strong domestic and international intellectual property and trade secret portfolio
+              .menu__item.menu__item_parent
+                a.menu__link(href='#' data-type='research') Research
+                .sub(data-type='research')
+                  .container.container_big.sub__container
+                    .sub__left
+                      .sub__title Research
+                    .sub__right
+                      .sub__list
+                        .sub__item
+                          a(href='#') ORAVEXX™ Research + Development >
+                          p Our proprietary cannabidiol composition that utilizes the RITe™ Platform to treat moderate to severe pain
+                        .sub__item
+                          a(href='#') Research Partners >
+                          p Partnering with the world’s leading research institutions and doctors to support multiple FDA-authorized investigator-initiated clinical trials  
+                        .sub__item
+                          a(href='#') Pipeline >
+                          p Investigator-initiated trials utilizing Orcosa’s proprietary formulation
+                        .sub__item
+                          a(href='#') Frequently Asked Questions >
+                          p Learn more about cannabidiol from the medical community and regulators
+              .menu__item.menu__item_parent
+                a.menu__link(href='#' data-type='company') Company
+                .sub(data-type='company')
+                  .container.container_big.sub__container
+                    .sub__left
+                      .sub__title Company
+                    .sub__right
+                      .sub__list
+                        .sub__item
+                          a(href='#') Overview >
+                          p We are modernizing the way medicines are taken
+                        .sub__item
+                          a(href='#') Our Team >
+                          p Experts in drug development and delivery, manufacturing and commercialization
+              .menu__item.menu__item_parent
+                a.menu__link(href='#' data-type='news') News
+                .sub(data-type='news')
+                  .container.container_big.sub__container
+                    .sub__left
+                      .sub__title News
+                    .sub__right
+                      .sub__list
+                        .sub__item
+                          a(href='#') In the News >
+                          p Recent media coverage regarding Orcosa
+                        .sub__item
+                          a(href='#') Press Releases >
+                          p Company news and announcements
+                        .sub__item
+                          a(href='#') Investors >
+                          p Information about Orcosa’s business for stockholders, potential investors and financial analysts
+              li.menu__item
+                a.menu__link(href='#' data-type='careers') Careers
+            +button('Contact', '#', 'btn_transparent')
+          .nav__toggle
+            .burger
+              .burger__item
+              .burger__item
+              .burger__item
+            img.close(src='images/close.svg' alt='')
+        
+    block main
+      
+    block footer
+      footer.footer
+       .container.container_big
+        .footer__top
+          ul.footer__menu
+            li
+              a(href='#') Technology
+            li
+              a(href='#') Research
+            li
+              a(href='#') Company
+            li
+              a(href='#') News
+            li
+              a(href='#') Careers
+          .logo.footer__logo
+            a(href='#').logo__link
+              img.logo__img(src='images/logo-footer.svg')
+        .footer__bot
+          div
+            .footer__link © 2022 Orcosa. All rights reserved.
+          .flex.flex_ycenter
+            ul.flex.flex_ycenter.footer__list
+              li
+                a.footer__link(href='#') Privacy Policy
+              li
+                a.footer__link(href='#') Accessibility Statement
+            a.flex.flex_ycenter.footer__link(href='#') 
+              img(src='images/linkedin.svg' alt='')
+        
+    block scripts
+      script(src='js/bundle.min.js') 
